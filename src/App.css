@@ -1,38 +1,167 @@
-.App {
+.header-logo {
+  padding: 0px;
+  height: 90px;
+}
+
+.dropzone {
+  border: 1px dotted black;
+  padding: 25px;
+  cursor: pointer;
+}
+
+/* .App {
+
+} */
+
+
+.qr-image, .qr-logo, .history-logo {
+  width: 300px;
+}
+
+.hero-image {
+  width: 400px;
+}
+
+.purchase-page .ant-card-head-title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-section {
+  margin-top: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.white {
+  background: #D2706B;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.boxed {
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.history-logo, .qr-logo {
+  clear: both;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 90vh;
+  margin-top: 60px;
+}
+
+.web3-button {
+  margin-top: 12px;;
+}
+
+.success-text {
+  color: green;
+}
+
+.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upload-image {
+  width: 250px;
+  margin: 10px;
+}
+
+.home-logo {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.error-text {
+  color: red;
+}
+
+.hero-slogan-section {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+.hero-slogan {
+  font-size: 28px;
+}
+
+.vertical-margin,
+.standard-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ant-input,
+input,
+textarea {
+  max-width: 600px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.ant-layout-header {
+  background: white;
+}
+
+
+
+.ant-card-head {
+  background: white !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.home-section {
+  padding-top: 60px;
+}
+
+.standard-btn {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.prompt-section {
+  margin-top: 40px;
+  font-size: 32px;
+  margin-right: 24px;
+  margin-bottom: 25px;
+}
+
+.home-section {
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+.error-text {
+  color: red;
+}
+
+.ant-layout-header {
+  background: white !important;
 }
