@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { SpheronClient, ProtocolEnum } from "@spheron/storage";
 import { Button, Input, Row, Col, Steps, Result } from "antd";
 import { TantrikaUrl, ipfsUrl, getExplorerUrl, humanError, } from "../util";
 import { ACTIVE_CHAIN, APP_NAME, EXAMPLE_FORM, updateForm } from "../constants";
@@ -8,7 +9,25 @@ import { deployContract } from "../contract/dataContract";
 import { useSigner } from "wagmi";
 import TextArea from "antd/lib/input/TextArea";
 
+const SPHERON_TOKEN = process.env.SPHERON_TOKEN;
+
 const { Step } = Steps;
+
+/* Spheron */
+// const client = new SpheronClient({ SPHERON_TOKEN });
+// let currentlyUploaded = 0;
+// const { uploadId, bucketId, protocolLink, dynamicLinks, cid } =
+//   await client.upload(filePath, {
+//     protocol: ProtocolEnum.IPFS,
+//     name,
+//     onUploadInitiated: (uploadId) => {
+//     console.log(`Upload with id ${uploadId} started...`);
+//   },
+//   onChunkUploaded: (uploadedSize, totalSize) => {
+//     currentlyUploaded += uploadedSize;
+//     console.log(`Uploaded ${currentlyUploaded} of ${totalSize} Bytes.`);
+//   },
+// });
 
 function UploadListing({network, account}) {
   const { data: signer, error: signerError, isLoading: signerLoading, refetch } = useSigner()
@@ -109,6 +128,8 @@ function UploadListing({network, account}) {
     return 0;
   };
 
+  
+
   return (
     <div>
           <div className="create-form boxed">
@@ -154,6 +175,8 @@ function UploadListing({network, account}) {
               setFiles={(files) => updateData("files", files)}
             />
 
+            
+
             <Button
               type="primary"
               className="standard-button"
@@ -162,6 +185,7 @@ function UploadListing({network, account}) {
               loading={loading}
               size="large"
             >
+            
               UPLOAD
             </Button>
             {!error && !result && loading && (
