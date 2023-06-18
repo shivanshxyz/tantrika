@@ -91,7 +91,7 @@ export default function PurchaseListing({network, account}) {
 
   return (
     <div className='boxed purchase-page'>
-      <Card title={        <span className='centered success-text'>Dataset available for purchase</span>}>
+      <Card title={        <span className='centered success-text'>Buy Dataset</span>}>
 
       {dataset && <div className='centered card boxed'>
         <h2>{dataset.title}</h2>

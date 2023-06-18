@@ -173,22 +173,21 @@ function UploadListing({network, account}) {
             {error && <div className="error-text">Error: {error}</div>}
             {result && (<div>
               <Result status="success"
- title="Created tantrika request!" subTitle="Access your page and content below"/>
+ title="Created Entry" subTitle=""/>
               <div>
                 <a href={ipfsUrl(result.dataUrl)} target="_blank">
-                  View files
+                  View on IPFS
                 </a>
                 <br />
                 <a href={result.contractUrl} target="_blank">
-                  View created contract
+                  Deployed Contract
                 </a>
                 <br />
                 <br />
                 <p>
-                  Share or post this page with potential customers
                   <br />
                   <a href={result.TantrikaUrl} target="_blank">
-                    View listing page
+                    View entry
                   </a>
                 </p>
               </div>
